@@ -1,4 +1,5 @@
 import { useState } from "react";
+import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import { supabase } from "../client";
@@ -28,6 +29,12 @@ export default function SignIn() {
   return (
     <div className={styles.container}>
       <main className={styles.main}>
+        <Image
+          src={"/icon_color.svg"}
+          alt="Magic Link"
+          height={100}
+          width={200}
+        />
         <h1 className={styles.title}>Sign In</h1>
         <input
           onChange={(e) => setEmail(e.target.value)}
